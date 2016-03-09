@@ -1,0 +1,21 @@
+const DEFAULT_PROPERTIES = {radio: 10};
+
+export class DemoShapeCircle extends DemoShape {
+  properties;
+
+  constructor(location=undefined, properties) {
+    super(location);
+    this.properties = Object.assign({}, DEFAULT_PROPERTIES, properties);
+  }
+
+  getSvg() {
+    return `
+      <g>
+        <circle cx="100" cy="300" r="64" fill="#6C8AB3" />
+        <circle cx="100" cy="300" r="32" fill="#FFF" />
+      </g>
+    `;
+  }
+
+
+}

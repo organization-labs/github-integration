@@ -1,0 +1,19 @@
+<div>
+    <div class="demo__panel__header"  *ngIf="isEditing">Header editing</div>
+    <div class="demo__panel__header"  *ngIf="!isEditing">Header readonly</div>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="demo__panel__footer" *ngIf="isEditing">
+      <button>Save changes</button>
+      <button (click)="onCancelEdit()">Cancel</button>
+    </div>
+
+    <div class="demo__panel__footer" *ngIf="!isEditing">
+      <button (click)="onEditValues()">Edit values</button>
+      <button>Create shape</button>
+    </div>
+
+</div>

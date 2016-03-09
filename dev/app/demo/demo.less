@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+.demo {
+  //background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  height:100vh;
+}
+
+  .demo__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    //background-color: #3333ff;
+    height: 100%;
+  }
+
+    .demo__actions__button {
+      height: 30px;
+      cursor: pointer;
+    }
+
+
+  .demo__header {
+    background: #136E2C;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    //max-height: 75px;
+    height: 10vh;
+  }
+
+    .demo__header__logo {
+      background: url('http://lorempixel.com/70/70/transport/');
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      flex-basis: 70px;
+      margin-left: 10px;
+    }
+
+    .demo__header__actions {
+      background-color: #136E2C;
+      flex-basis: 30%;
+      height: 100%;
+    }
+
+  .demo__main {
+    //background: #236662;
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+  }
+
+    .demo__main__canvas {
+      background-color: #EFECCA;
+      flex: 1 1 70%;
+    }
+
+    .demo__panel {
+      background-color: #046380;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 30%;
+      height: 100%;
+    }
+
+      .demo__panel__header {
+        background-color: lightgray;
+      }
+
+      .demo__panel__main {
+      }
+
+      .demo__panel__footer {
+        background-color: lightgray;
+      }
+
+  .demo__footer {
+    //background-color: blue;
+    background: #002F2F;
+    height: 5vh;
+  }
+
+
