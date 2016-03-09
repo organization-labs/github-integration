@@ -13,12 +13,12 @@ export class DemoActionsComponent {
   constructor(router: Router) {
     this._router = router;
 
+    // Move to a class
     this.actions = {
       circle: {
-        componentName: 'DemoPanelComponent',
-        properties: {
+          viewState: 'CircleViewState',
+          editState: 'CircleEditState',
           title: 'the circle'
-        }
       }
     };
   }
@@ -26,8 +26,7 @@ export class DemoActionsComponent {
   onNavigate(to) {
     let target = this.actions[to];
 
-    // TODO include actions
-    this._router.navigate([target.componentName,{properties:target.properties}]);
+    this._router.navigate(['DemoPanelComponent',{properties:target}]);
   }
 
 }

@@ -2,9 +2,7 @@
     <div class="demo__panel__header"  *ngIf="isEditing">Header editing</div>
     <div class="demo__panel__header"  *ngIf="!isEditing">Header readonly</div>
 
-    <div>
-      Aqui va el content
-    </div>
+    <router-outlet></router-outlet>
 
     <div class="demo__panel__footer" *ngIf="isEditing">
       <button>Save changes</button>
