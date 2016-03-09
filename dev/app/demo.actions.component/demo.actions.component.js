@@ -12,13 +12,22 @@ export class DemoActionsComponent {
   _router;
   constructor(router: Router) {
     this._router = router;
+
     this.actions = {
-      circle: 'DemoShapeCircleComponent'
+      circle: {
+        componentName: 'DemoPanelComponent',
+        properties: {
+          title: 'the circle'
+        }
+      }
     };
   }
 
   onNavigate(to) {
-    this._router.navigate(['DemoShapeCircleComponent']);
+    let target = this.actions[to];
+
+    // TODO include actions
+    this._router.navigate([target.componentName,{properties:target.properties}]);
   }
 
 }

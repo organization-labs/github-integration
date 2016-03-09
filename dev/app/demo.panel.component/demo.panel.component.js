@@ -1,7 +1,8 @@
 import {Component} from 'angular2/core';
 import {RouteConfig} from 'angular2/router';
-import {DemoShapeCircleComponent} from '../demo.shape-circle.component/demo.shape-circle.component';
+import {DemoShapeCircleViewComponent} from '../demo.shape-circle.component/demo.shape-circle-view.component';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {RouteParams} from 'angular2/router';
 
 @Component({
   selector: 'demo-panel',
@@ -10,9 +11,14 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 })
 export class DemoPanelComponent {
   isEditing;
+  routerParams;
+  constructor(_routerParams: RouteParams) {
+    this.routerParams = _routerParams;
+  }
 
   ngOnInit() {
     this.isEditing = false;
+    alert(this.routerParams.get('properties').title);
   }
 
   onEditValues() {
